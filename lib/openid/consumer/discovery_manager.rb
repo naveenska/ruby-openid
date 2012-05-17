@@ -42,6 +42,7 @@ module OpenID
 
       def get_next_service
         manager = get_manager
+        raise manager.inspect
         if !manager.nil? && manager.empty?
           destroy_manager
           manager = nil
